@@ -1,4 +1,4 @@
-# Workflow/pipeline details for the albopictus autogeny RNA-seq analysis
+# Workflow/pipeline details for the Pieris rapae RNA-seq analysis
 
 ## Upstream 
 Information about sequence reads (raw read count, read alignment rate, etc.) for the data can be found in the following google sheets: ([link](<>))
