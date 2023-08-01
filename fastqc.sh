@@ -11,6 +11,6 @@
 
 #- RUN fastqc ----------------------------------------------------------------#
 
-/home/sls366/FastQC/fastqc -o /home/sls366/albo_biting/mRNA/fastqc_dir /home/sls366/albo_biting/mRNA/trim_dir/*PE.fastq.gz
+/home/sls366/FastQC/fastqc -o /home/sls366/prapae/fastqc_dir /home/sls366/prapae/trim_dir/*PE.fastq.gz
 
 #- FIN -----------------------------------------------------------------------#
