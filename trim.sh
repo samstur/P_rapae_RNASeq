@@ -11,21 +11,21 @@
 
 #- Set variables --------------------------------------------------------------$
 
-raw_dir=/home/sls366/albo_biting/mRNA/5332
+raw_dir=/home/sls366/prapae/raw_dir
 
-trim_dir=/home/sls366/albo_biting/mRNA/5332/trim_dir
+trim_dir=/home/sls366/prapae/trim_dir
 
 trim=/home/sls366/Trimmomatic-0.39/trimmomatic-0.39.jar
 
-adapter=/home/sls366/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10
+adapter=/home/sls366/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 ### need to check if these are the appropriate adapters
 
 #- RUN Trimmomatic-------------------------------------------------------------$
 
-files=(${raw_dir}/*_R1_001.fastq.gz)
+files=(${raw_dir}/*_R1_001.fastq.gz) ## check file endings
 for file in ${files[@]}
 do
 name=${file}
-base=`basename ${name} _R1_001.fastq.gz`
+base=`basename ${name} _R1_001.fastq.gz` ## check file endings
 java -Xmx2G -jar ${trim} PE \
           ${raw_dir}/${base}_R1_001.fastq.gz \
           ${raw_dir}/${base}_R2_001.fastq.gz \
