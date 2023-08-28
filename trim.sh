@@ -21,14 +21,14 @@ adapter=/home/sls366/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 ### need 
 
 #- RUN Trimmomatic-------------------------------------------------------------$
 
-files=(${raw_dir}/*_R1_001.fastq.gz) ## check file endings
+files=(${raw_dir}/*_R1_trimmed.fastq.gz) 
 for file in ${files[@]}
 do
 name=${file}
-base=`basename ${name} _R1_001.fastq.gz` ## check file endings
+base=`basename ${name} _R1_trimmed.fastq.gz` 
 java -Xmx2G -jar ${trim} PE \
-          ${raw_dir}/${base}_R1_001.fastq.gz \
-          ${raw_dir}/${base}_R2_001.fastq.gz \
+          ${raw_dir}/${base}_R1_trimmed.fastq.gz \
+          ${raw_dir}/${base}_R2_trimmed.fastq.gz \
           ${trim_dir}/${base}_1_PE.fastq.gz ${trim_dir}/${base}_1_SE.fastq.gz \
           ${trim_dir}/${base}_2_PE.fastq.gz ${trim_dir}/${base}_2_SE.fastq.gz \
           ILLUMINACLIP:${adapter} \
