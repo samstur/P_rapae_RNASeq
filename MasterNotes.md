@@ -12,3 +12,15 @@ The raw reads are available in NCBI’s short read archive (SRA) under accession
 Trimmomatic (version 0.39) was used to trim sequence reads based on quality ([script](https://github.com/samstur/P_rapae_RNASeq/blob/main/trim.sh))
 
 FastQC (v0.11.9) was used for quality control visualization ([script](https://github.com/samstur/P_rapae_RNASeq/blob/main/fastqc.sh))
+
+### Mapping
+We will be mapping with STAR (v2.7.1a).
+
+Mapping was done using the latest genome assembly available on NCBI for Pieris rapae (GCF_905147795.1 aka ilPieRapa1.1)
+
+STAR (v2.7.1a) was used for indexing the genome ([script]())
+
+Reads were mapped in a two pass method. The first pass followed typical method with splice junctions from annotations ([script]()). The second pass is similar except that it additionally uses the output splice junctions info from the first pass (these would be novel splice junctions) to facilitate mapping ([script]()).
+
+Output sam files were converted to bam and then indexed ([script]())
+
