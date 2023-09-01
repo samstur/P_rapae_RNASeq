@@ -18,7 +18,7 @@ We will be mapping with STAR (v2.7.1a).
 
 Mapping was done using the latest genome assembly available on NCBI for Pieris rapae (GCF_905147795.1 aka ilPieRapa1.1)
 
-STAR (v2.7.1a) was used for indexing the genome ([script]())
+STAR (v2.7.1a) was used for indexing the genome ([script](https://github.com/samstur/P_rapae_RNASeq/blob/main/STAR_genomeIndex.sh))
 
 Reads were mapped in a two pass method. The first pass followed typical method with splice junctions from annotations ([script]()). The second pass is similar except that it additionally uses the output splice junctions info from the first pass (these would be novel splice junctions) to facilitate mapping ([script]()).
 
