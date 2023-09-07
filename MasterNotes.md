@@ -22,5 +22,5 @@ STAR (v2.7.1a) was used for indexing the genome ([script](https://github.com/sam
 
 Reads were mapped in a two pass method. The first pass followed typical method with splice junctions from annotations ([script](https://github.com/samstur/P_rapae_RNASeq/blob/main/STAR_mapping.sh)). The second pass is similar except that it additionally uses the output splice junctions info from the first pass (these would be novel splice junctions) to facilitate mapping ([script](https://github.com/samstur/P_rapae_RNASeq/blob/main/STAR_mapping_twopass.sh)). 
 
-Output sam files were converted to bam and then indexed ([script]())
+Output sam files were converted to bam (after which the sam files were deleted) and then bam files were indexed ([script](https://github.com/samstur/P_rapae_RNASeq/blob/main/sam2bam.sh))
 
