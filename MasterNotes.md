@@ -24,3 +24,8 @@ Reads were mapped in a two pass method. The first pass followed typical method w
 
 Output sam files were converted to bam (after which the sam files were deleted) and then bam files were indexed ([script](https://github.com/samstur/P_rapae_RNASeq/blob/main/sam2bam.sh))
 
+## Read counting
+HTSeq (v0.13.5) was used to counts reads mapped to genes for downstream analyses.
+First used HTseq to check the strandedness. Ran one file using forward, reverse, and no strandedness then chose the one with the fewest "no feature" outputs ([script]https://github.com/samstur/P_rapae_RNASeq/blob/main/htseq_stranded_test.sh). 
+Then used HTSeq to produce read count files for all samples ([script]https://github.com/samstur/P_rapae_RNASeq/blob/main/htseq.sh).
+
