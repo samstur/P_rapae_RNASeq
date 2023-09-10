@@ -1,7 +1,7 @@
 # Workflow/pipeline details for the Pieris rapae RNA-seq analysis
 
 ## Upstream 
-Information about sequence reads (raw read count, read alignment rate, etc.) for the data can be found in the following google sheets: ([link](<>))
+Information about sequence reads (raw read count, read alignment rate, etc.) for the data can be found in the following google sheets: ([link]([<>](https://docs.google.com/spreadsheets/d/1QJW4FL8r60wM-CdHDC86XxDxcfvSClsfac3ZJPZFG60/edit#gid=0)))
 
 ### Data Accession
 Data was generated from cateprillars reared at the University of North Carolina. Caterpillars were dissected and RNA was extracted by Sam Sturiale at Georgetown University.
