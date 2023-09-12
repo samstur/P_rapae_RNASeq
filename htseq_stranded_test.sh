@@ -16,7 +16,7 @@ source activate conda_env
 bam_dir=/home/sls366/prapae/bam_dir
 count_dir=/home/sls366/prapae/counts_dir  
 htseq=/home/sls366/.conda/envs/conda_env/bin/htseq-count
-ref=/home/sls366/prapae/genome_files/genomic.gff
+ref=/home/sls366/prapae/genome_files/genomic_notRNA_norRNA.gff # I had to subset the gff to remove all tRNA and rRNA to avoid an error from HTSeq.
 
 #- RUN htseq ----------------------------------------------------------------#
 
