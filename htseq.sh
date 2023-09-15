@@ -2,7 +2,7 @@
 #SBATCH --job-name=htseq_count --output=%x.%j.out
 #SBATCH --mail-type=END,FAIL --mail-user=sls366@georgetown.edu
 #SBATCH --nodes=1 --ntasks=1 --cpus-per-task=1 --time=96:00:00
-#SBATCH --mem=4G
+#SBATCH --mem=20G
 
 #-----------------------------------------------------------------------------#
 # This script uses htseq to count and assign reads to genes #
