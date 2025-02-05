@@ -2,11 +2,16 @@
 
 ## Accessing Sequencing Data 
 Maryland Genomics Facilty uses Aspera to transfer read files. So, I first had to download files for Aspera to the MAC desktop using the following command then enter the password provided by UMD:
-$HOME/<filepath>/Applications/Aspera\ Connect.app/Contents/Resources/ascp -l 1024M -k 1 -QT <link from UMD> $HOME/<filepath>
-This resulted in three files: a tar filed containing the trimmed and untrimmed version of the reads for each sample (forward and reverse reads), an md5sum file, and a text summary file. The trimming done at UMD involved the following parameters: “We use Trimmomatic and trim for both adaptors and quality. We run Trimmomatic with parameters: simple clip threshold=7, seed mismatches=2, palindrome threshold=40, minimum sequence length=30, and training quality=20.” Also, from Lisa Sadzewicz: “Trimmed files included trimmed index/adaptor and quality trimming.”
+
+$HOME/insertfilepathhere/Applications/Aspera\ Connect.app/Contents/Resources/ascp -l 1024M -k 1 -QT insertlinkfromUMDhere $HOME/<filepath>
+
+This resulted in three files: a tar filed containing the trimmed and untrimmed version of the reads for each sample (forward and reverse reads), an md5sum file, and a text summary file. 
+
+The trimming done at UMD involved the following parameters: “We use Trimmomatic and trim for both adaptors and quality. We run Trimmomatic with parameters: simple clip threshold=7, seed mismatches=2, palindrome threshold=40, minimum sequence length=30, and training quality=20.” Also, from Lisa Sadzewicz: “Trimmed files included trimmed index/adaptor and quality trimming.” I ended up using the trimmed version but also doing my own trimming on top of the trimming done at UMD.
+
 To check the md5sum file, I used the following commands and made sure the two outputs matched to ensure the tar file downloaded fully:
-$md5sum <name of tar file>  OR $ md5 <name of tar file>
-$head <name of md5sum file>
+$md5sum insertnameoftarfilehere
+$head insertnameofmd5sumfilehere 
 
 Next, I needed to extract the tar file (do this on HPC so move tar file to google bucket then onto HPC. Use the upload.sh script for this). Then I used the extract.sh script to extract the tar file. Finally, I added the sample name to each of the file names. 
 
