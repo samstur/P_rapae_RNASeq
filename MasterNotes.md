@@ -1,7 +1,7 @@
 # Workflow/pipeline details for the Pieris rapae RNA-seq analysis
 
 ## Accessing Sequencing Data 
-Maryland Genomics Facilty uses Aspera to transfer read files. So, I first had to download files for Aspera to the MAC desktop using the following command then enter the password provided by UMD:
+Maryland Genomics Facilty uses Aspera to transfer read files. So, I first had to download Aspera to the MAC desktop, then use Aspera to pull down the sequencing files using the following command then enter the password provided by UMD:
 
 $HOME/insertfilepathhere/Applications/Aspera\ Connect.app/Contents/Resources/ascp -l 1024M -k 1 -QT insertlinkfromUMDhere $HOME/<filepath>
 
