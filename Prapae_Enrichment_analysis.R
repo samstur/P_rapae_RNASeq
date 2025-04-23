@@ -203,42 +203,6 @@ GOFULL <- function(inputgenelist,universegenelist, term2genelist, term2namelist)
   return(out_final)
 }
 
-
-
-# Save my workspace to complete_image.RData in th,e
-#  data folder of my working directory
-setwd("/Users/samsturiale/Documents/Georgetown/Armbruster Lab/INTBio grant work/RNA-Seq workflow/R output/GO Tests")
-#save.image(file = "GOAnalysis.RData")
-# Load objects into my workspace
-setwd("/Users/samsturiale/Documents/Georgetown/Armbruster Lab/INTBio grant work/RNA-Seq workflow/R output/GO Tests")
-load(file = "GOAnalysis.RData")
-
-testing_BP <- GOFULL(testingtemp_sig,testingtemp_all, DM2_gene_GO_BP2_new, DM2_gene_GO_BP2_names)
-
-
-rearing_BP <- GOFULL(rearingtemp_sig,rearingtemp_all, DM2_gene_GO_BP2_new, DM2_gene_GO_BP2_names)
-
-
-testing_MF <- GOFULL(testingtemp_sig,testingtemp_all, DM2_gene_GO_MF2_new, DM2_gene_GO_MF2_names)
-
-
-rearing_MF <- GOFULL(rearingtemp_sig,rearingtemp_all, DM2_gene_GO_MF2_new, DM2_gene_GO_MF2_names)
-
-
-setwd("/Users/samsturiale/Documents/Georgetown/Armbruster Lab/INTBio grant work/RNA-Seq workflow/R output/GO Tests")
-ggsave("testing_BP_plot.png",plot=testing_BP_plot,dpi=600,
-       units='in',width=10,height=10)
-ggsave("rearing_BP_plot.png",plot=rearing_BP_plot,dpi=600,
-       units='in',width=10,height=10)
-ggsave("testing_MF_plot.png",plot=testing_MF_plot,dpi=600,
-       units='in',width=10,height=10)
-ggsave("rearing_MF_plot.png",plot=rearing_MF_plot,dpi=600,
-       units='in',width=10,height=10)
-write.csv(testing_BP,"GO_testing_BP.csv",row.names = F)
-write.csv(rearing_BP,"GO_rearing_BP.csv",row.names = F)
-write.csv(testing_MF,"GO_testing_MF.csv",row.names = F)
-write.csv(rearing_MF,"GO_rearing_MF.csv",row.names = F)
-
 ##########################################################################
 ##########################################################################
 ##########################################################################
@@ -278,25 +242,6 @@ goprapae_MF_new$term = gonames$Term[match(goprapae_MF_new$GO, as.character(gonam
 head(goprapae_MF_new)
 goprapae_MF_names <- goprapae_MF_new[,c(1,3)]
 head(goprapae_MF_names)
-
-testing_BP <- GOFULL(testingtemp_sig,testingtemp_all, goprapae_BP_new, goprapae_BP_names)
-View(testing_BP)
-testing_BP_plot <- GOFULLPLOT(testing_BP)
-testing_BP_plot
-View(testing_BP)
-
-rearing_BP <- GOFULL(rearingtemp_sig,rearingtemp_all, goprapae_BP_new, goprapae_BP_names)
-rearing_BP_plot <- GOFULLPLOT(rearing_BP)
-rearing_BP_plot
-
-testing_MF <- GOFULL(testingtemp_sig,testingtemp_all, goprapae_MF_new, goprapae_MF_names)
-testing_MF_plot <- GOFULLPLOT(testing_MF)
-testing_MF_plot
-
-rearing_MF <- GOFULL(rearingtemp_sig,rearingtemp_all, goprapae_MF_new, goprapae_MF_names)
-rearing_MF_plot <- GOFULLPLOT(rearing_MF)
-rearing_MF_plot
-
 
 
 ##########################################################################
