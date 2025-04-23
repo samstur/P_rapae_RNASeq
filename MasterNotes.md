@@ -46,3 +46,11 @@ First used HTseq to check the strandedness. Illumina report from UMD specifies t
 
 Then I used HTSeq to produce read count files for all samples ([script](https://github.com/samstur/P_rapae_RNASeq/blob/main/htseq.sh)).
 
+## Downstream 
+
+### DESeq2 (v1.44.0) package in R (v4.4.1) was used to identify differentially expressed genes ([script](https://github.com/samstur/P_rapae_RNASeq/blob/main/Prapae_DESeq_2factordesign.R))
+
+### clusterProfiler (v4.12.6) packagein R was used to perform overrepresentation tests using both gene ontology (GO) terms and KEGG pathways ([script](https://github.com/samstur/P_rapae_RNASeq/blob/main/Prapae_Enrichment_analysis.R))
+
+### the hclust function in R was used to perform utilized hierarchical clustering to examine the different patterns of expression across samples in the list of genes that were DE in response to the interaction of developmental and testing temperature ([script](https://github.com/samstur/P_rapae_RNASeq/blob/main/Prapae_IntGene_Clustering.R))
+
