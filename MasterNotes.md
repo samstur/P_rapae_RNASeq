@@ -58,7 +58,7 @@ Then I used HTSeq to produce read count files for all samples ([script](https://
 
 ### This [script](https://github.com/samstur/P_rapae_RNASeq/blob/main/Prapae_log2fc_rearing_v_testing_plot.R) was used to plot the figure showing the log2FC values for genes significantly affected by developmental temperature and short-term acclimation temperature.
 
-### This script was used to analyze and plot data on mortality and developmental time for this experiment.
+### This [script](https://github.com/samstur/P_rapae_RNASeq/blob/main/Prapae_Mortality_DevTime_Plot.R) was used to analyze and plot data on mortality and developmental time for this experiment.
 
 ### This [script](https://github.com/samstur/P_rapae_RNASeq/blob/main/climate_UNC_fig.R) was used to download and process data on the climate of Chapel Hill, NC.
 
