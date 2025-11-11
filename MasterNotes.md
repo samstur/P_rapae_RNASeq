@@ -60,5 +60,5 @@ Then I used HTSeq to produce read count files for all samples ([script](https://
 
 ### This script was used to analyze and plot data on mortality and developmental time for this experiment.
 
-### This script was used to download and process data on the climate of Chapel Hill, NC.
+### This ([script]https://github.com/samstur/P_rapae_RNASeq/blob/main/climate_UNC_fig.R) was used to download and process data on the climate of Chapel Hill, NC.
 
