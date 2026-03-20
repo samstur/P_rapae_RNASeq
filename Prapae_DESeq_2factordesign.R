@@ -261,15 +261,6 @@ res_testingtemp.shrink_sig_noint <- dplyr::filter(res_testingtemp.shrink_tbl_noi
 summary(res_rearingtemp.shrink_sig_noint) #230 genes ## same number as if you run it with the reverse design
 summary(res_testingtemp.shrink_sig_noint) #192 genes ## same number as if you run it with the reverse design
 
-## remove the genes from the interaction list
-res_rearingtemp.shrink_sig_noint <- subset(res_rearingtemp.shrink_sig_noint,
-                                           !(res_rearingtemp.shrink_sig_noint$gene %in% res_interaction.shrink_sig.gene$gene))
-summary(res_rearingtemp.shrink_sig_noint) # now 221 without the interaction genes
-
-res_testingtemp.shrink_sig_noint <- subset(res_testingtemp.shrink_sig_noint,
-                                           !(res_testingtemp.shrink_sig_noint$gene %in% res_interaction.shrink_sig.gene$gene))
-summary(res_testingtemp.shrink_sig_noint) # now 185 without the interaction genes
-
 # add gene names from NCBI to each of these data frames
 genes.rearingtemp_noint <- queryMany(res_rearingtemp.shrink_sig_noint$gene, scopes="symbol", fields=c("name"))
 colnames(genes.rearingtemp_noint)<-c("gene","id","score","gene name")
@@ -285,8 +276,6 @@ genes.testingtemp_noint <- subset(genes.testingtemp_noint, select = c("gene", "g
 res_testingtemp.shrink_sig.gene_noint <- as.data.frame(merge(genes.testingtemp_noint,res_testingtemp.shrink_sig_noint,by="gene"))
 View(res_testingtemp.shrink_sig.gene_noint)
 
-summary(res_rearingtemp.shrink_sig.gene_noint) #221 genes
-summary(res_testingtemp.shrink_sig.gene_noint) #185 genes 
 
 
 ## save each to csv
