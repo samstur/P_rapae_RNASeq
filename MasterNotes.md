@@ -15,6 +15,8 @@ $head insertnameofmd5sumfilehere
 
 Next, I needed to extract the tar file (do this on HPC so move tar file to google bucket then onto HPC. Use the upload.sh script for this). Then I used the extract.sh script to extract the tar file. Finally, I added the sample name to each of the file names. 
 
+## Sample and Treatment Labels
+Note that the treatment and sample labels in the original fasta files and across the scripts differ from how they are described in the final manuscript. In the scripts, the two temperature treatments are referred to as "rearing temperature" and "testing temperature", and these are referred to in the final manuscript as "developmental temperature" and "short-term acclimation temperature", respectively. For each temperature treatment, there were two levels: 30C with +/-5C daily fluctuations or 16C with +/-5C daily fluctuations, resulting in four total treatment combinations. The four total treatments in the manuscript are described as 30-30, 30-16, 16-30, and 16-16 which correspond to sample labels in original fasta files and scripts of 30C, 30F, 16F, 16C (C stood for constant to indicate no switch in temperature while F stood for fluctuate to indicate a switch in temperature took place). 
 
 ## Upstream 
 Information about sequence reads (raw read count, read alignment rate, etc.) for the data can be found in the following google sheets: [link](https://docs.google.com/spreadsheets/d/1QJW4FL8r60wM-CdHDC86XxDxcfvSClsfac3ZJPZFG60/edit#gid=0)
@@ -59,6 +61,8 @@ Then I used HTSeq to produce read count files for all samples ([script](https://
 ### This [script](https://github.com/samstur/P_rapae_RNASeq/blob/main/Prapae_log2fc_rearing_v_testing_plot.R) was used to plot the figure showing the log2FC values for genes significantly affected by developmental temperature and short-term acclimation temperature.
 
 ### This [script](https://github.com/samstur/P_rapae_RNASeq/blob/main/Prapae_Mortality_DevTime_Plot.R) was used to analyze and plot data on mortality and developmental time for this experiment.
+
+### This [script](https://github.com/samstur/P_rapae_RNASeq/blob/main/Prapae_PCAplot.R) was used to generate a principal components analysis (PCA) plot for the RNA-seq data. 
 
 ### This [script](https://github.com/samstur/P_rapae_RNASeq/blob/main/climate_UNC_fig.R) was used to download and process data on the climate of Chapel Hill, NC.
 
